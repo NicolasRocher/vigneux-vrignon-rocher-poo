@@ -6,11 +6,6 @@ class Personnage {
 
   private $_name;
 
-  public function __construct($name) {
-    $this->_name = $name;
-  }
-
-
   public function frapper($monstreAttaque){
     $monstreAttaque->_hp -= $this->_atk;
   }
@@ -34,17 +29,12 @@ class Personnage {
 
 class Classe extends Personnage {
 
-  private $_test;
-
-  public function __construct() {
-    $this->test = 2;
+  public function __construct($name) {
+    $this->_name = $name;
   }
 }
 
-$perso = new Personnage('Rémi');
-var_dump($perso);
-
-$test = new Classe('Rémi');
+$test = new Classe('Essai');
 var_dump($test);
 
 // au clic sur le boutton 'jouer' :
