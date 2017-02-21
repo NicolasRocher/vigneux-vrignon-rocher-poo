@@ -4,6 +4,14 @@
 
 class Personnage {
 
+
+  protected $_name;
+  protected $_atk;
+  protected $_mag;
+  protected $_def;
+  protected $_pv;
+  protected $_xp;
+
   public function frapper($monstreAttaque){
     $monstreAttaque->_pv -= $this->_atk;
   }
@@ -47,64 +55,39 @@ class Personnage {
 
 class Guerrier extends Personnage {
 
-  protected $_name;
-  protected $_atk = 50;
-  protected $_mag = 0;
-  protected $_def = 30;
-  protected $_pv = 50;
-  protected $_xp = 0;
-
   public function __construct($name) {
     $this->_name = $name;
+    $this->_atk += 40;
+    $this->_def += 25;
+    $this->_pv += 30;
   }
 }
 class Magicien extends Personnage {
 
-  protected $_name;
-  protected $_atk = 0;
-  protected $_mag = 50;
-  protected $_def = 15;
-  protected $_pv = 40;
-  protected $_xp = 0;
-
   public function __construct($name) {
     $this->_name = $name;
+    $this->_mag += 50;
+    $this->_def += 20;
+    $this->_pv += 20;
   }
 }
 class Paladin extends Personnage {
 
-  protected $_name;
-  protected $_atk = 50;
-  protected $_mag = 50;
-  protected $_def = 40;
-  protected $_pv = 60;
-  protected $_xp = 0;
-
   public function __construct($name) {
     $this->_name = $name;
+    $this->_atk += 50;
+    $this->_mag += 50;
+    $this->_def += 50;
+    $this->_pv += 50;
   }
 }
 
-Class Monstre extends Personnage {
-
-  protected $_name = 'Gobelin';
-  protected $_pv = 30;
-  protected $_def = 10;
-
-}
-
-
-$guerrier = new Guerrier('Nico');
-$magicien = new Magicien('Rémi');
-$paladin = new Paladin('Roland');
-
-$paladin->frapper($guerrier);
-$magicien->lancerSort($paladin);
-$guerrier->frapper($magicien);
-
-echo 'La vie du paladin est de : ', $paladin->afficherPv() ;
-echo 'La vie du magicien est de : ', $magicien->afficherPv() ;
-echo 'La vie du guerrier est de : ', $guerrier->afficherPv() ;
+$test = new Guerrier('Rémi');
+var_dump($test);
+$test2 = new Paladin('Nico');
+var_dump($test2);
+$test3 = new Magicien('Roland');
+var_dump($test3);
 
 
  ?>

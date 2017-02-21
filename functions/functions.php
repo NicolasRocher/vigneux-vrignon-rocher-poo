@@ -1,7 +1,7 @@
 <!-- INCLUDES -->
 <?php
 
-require "personnage.php";
+require "monstres.php";
 
 
 
