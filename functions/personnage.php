@@ -19,7 +19,7 @@ class Personnage {
     $monstreAttaque->_hp -= $this->_mag;
   }
 
-  public function passerPorte() {
+  public function ouvrirPorte() {
     $this->_lv = $this->_lv +1; // a voir
   }
 
@@ -33,6 +33,19 @@ class Personnage {
 
 }
 
+// au clic sur le boutton 'jouer' :
+$perso = new Personnage;
 
+// au clic du boutton 'attaquer' :
+$perso->frapper($monstre);
+
+// au clic du boutton 'lancer un sort' :
+$perso->lancerSort($monstre);
+
+// au clic du boutton 'ouvrir coffre' :
+$perso->ouvrirCoffre($coffre);
+
+// au clic du boutton 'ouvrir porte' :
+$perso->ouvrirPorte($porte);
 
  ?>
