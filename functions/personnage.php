@@ -4,12 +4,11 @@
 
 class Personnage {
 
-  private $_atk = 20;
-  private $_mag = 10;
-  private $_def = 5;
-  private $_hp = 50;
-  private $_wp = false;
-  private $_lv = 0;
+  private $_name;
+
+  public function __construct($name) {
+    $this->_name = $name;
+  }
 
 
   public function frapper($monstreAttaque){
@@ -33,19 +32,34 @@ class Personnage {
 
 }
 
+class Classe extends Personnage {
+
+  private $_test;
+
+  public function __construct() {
+    $this->test = 2;
+  }
+}
+
+$perso = new Personnage('Rémi');
+var_dump($perso);
+
+$test = new Classe('Rémi');
+var_dump($test);
+
 // au clic sur le boutton 'jouer' :
-$perso = new Personnage;
+//$perso = new Personnage;
 
 // au clic du boutton 'attaquer' :
-$perso->frapper($monstre);
+//$perso->frapper($monstre);
 
 // au clic du boutton 'lancer un sort' :
-$perso->lancerSort($monstre);
+//$perso->lancerSort($monstre);
 
 // au clic du boutton 'ouvrir coffre' :
-$perso->ouvrirCoffre($coffre);
+//$perso->ouvrirCoffre($coffre);
 
 // au clic du boutton 'ouvrir porte' :
-$perso->ouvrirPorte($porte);
+//$perso->ouvrirPorte($porte);
 
  ?>

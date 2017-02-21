@@ -10,7 +10,13 @@
   </head>
   <body>
 
+<?php
 
+require "functions/functions.php";
+
+ ?>
+
+ <button type="button" name="button" onlclick="start();">Commencer</button>
 
 
     <script src="//code.jquery.com/jquery-3.1.1.min.js">

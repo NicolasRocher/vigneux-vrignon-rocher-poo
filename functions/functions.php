@@ -1,8 +1,11 @@
 <!-- INCLUDES -->
 <?php
 
-include 'personnage.php';
-include 'salles.php';
-include 'monstres.php';
+require "personnage.php";
+
+function start() {
+  $perso = new Personnage;
+  header('Location: classes.php');
+}
 
  ?>
