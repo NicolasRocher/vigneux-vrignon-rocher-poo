@@ -1,6 +1,8 @@
 
 <?php
 
+require 'classes.php';
+require 'monstres.php';
 
 class Personnage {
 
@@ -52,42 +54,5 @@ class Personnage {
   }
 
 }
-
-class Guerrier extends Personnage {
-
-  public function __construct($name) {
-    $this->_name = $name;
-    $this->_atk += 40;
-    $this->_def += 25;
-    $this->_pv += 30;
-  }
-}
-class Magicien extends Personnage {
-
-  public function __construct($name) {
-    $this->_name = $name;
-    $this->_mag += 50;
-    $this->_def += 20;
-    $this->_pv += 20;
-  }
-}
-class Paladin extends Personnage {
-
-  public function __construct($name) {
-    $this->_name = $name;
-    $this->_atk += 50;
-    $this->_mag += 50;
-    $this->_def += 50;
-    $this->_pv += 50;
-  }
-}
-
-$test = new Guerrier('Rémi');
-var_dump($test);
-$test2 = new Paladin('Nico');
-var_dump($test2);
-$test3 = new Magicien('Roland');
-var_dump($test3);
-
 
  ?>
