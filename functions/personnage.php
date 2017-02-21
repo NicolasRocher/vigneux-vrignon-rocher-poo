@@ -11,13 +11,36 @@ class Personnage {
     $monstreAttaque->_pv -= $this->_mag;
   }
   public function ouvrirPorte() {
-    $this->_lv = $this->_lv +1; // a voir
+    $this->_xp += 1;
+    //header('Location: salles.php');
   }
   public function ouvrirCoffre($coffreOuvert) {
     $coffreOuvert->_objet = $this->_wp; // ne permet que l'arme, pas la potion.
   }
   public function fuir() {
     $this->_pv = $this->_hp - 5;
+  }
+
+  public function afficherName() {
+    return $this->_name;
+  }
+  public function afficherPv() {
+    return $this->_pv;
+  }
+  public function afficherAtk() {
+    return $this->_atk;
+  }
+  public function afficherMag() {
+    return $this->_mag;
+  }
+  public function afficherDef() {
+    return $this->_def;
+  }
+  public function afficherXp() {
+    return $this->_xp;
+  }
+  public function afficherWeapon() {
+    return $this->_weapon;
   }
 
 }
@@ -66,37 +89,22 @@ Class Monstre extends Personnage {
 
   protected $_name = 'Gobelin';
   protected $_pv = 30;
+  protected $_def = 10;
 
 }
 
 
+$guerrier = new Guerrier('Nico');
+$magicien = new Magicien('Rémi');
+$paladin = new Paladin('Roland');
 
-$guerrier = new Guerrier('Warrior');
-var_dump($guerrier );
+$paladin->frapper($guerrier);
+$magicien->lancerSort($paladin);
+$guerrier->frapper($magicien);
 
-$magicien = new Magicien('Mago');
-var_dump($magicien);
+echo 'La vie du paladin est de : ', $paladin->afficherPv() ;
+echo 'La vie du magicien est de : ', $magicien->afficherPv() ;
+echo 'La vie du guerrier est de : ', $guerrier->afficherPv() ;
 
-$paladin = new Paladin('Paladum');
-var_dump($paladin);
-
-$monstre = new Monstre();
-$magicien->lancerSort($monstre);
-var_dump($monstre);
-
-// au clic sur le boutton 'jouer' :
-//$perso = new Personnage;
-
-// au clic du boutton 'attaquer' :
-//$perso->frapper($monstre);
-
-// au clic du boutton 'lancer un sort' :
-//$perso->lancerSort($monstre);
-
-// au clic du boutton 'ouvrir coffre' :
-//$perso->ouvrirCoffre($coffre);
-
-// au clic du boutton 'ouvrir porte' :
-//$perso->ouvrirPorte($porte);
 
  ?>
