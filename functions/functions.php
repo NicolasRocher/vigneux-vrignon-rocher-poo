@@ -2,7 +2,8 @@
 <?php
 
 require "personnage.php";
-
+require "salles.php";
+require "coffre.php";
 // $test = new Guerrier('Guerrier');
 // $test2 = new Paladin('Paladin');
 // $test3 = new Magicien('Magicien');
