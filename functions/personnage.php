@@ -7,6 +7,7 @@ require 'monstres.php';
 class Personnage {
 
 
+  protected $_classe;
   protected $_name;
   protected $_atk;
   protected $_mag;
@@ -31,6 +32,9 @@ class Personnage {
     $this->_pv = $this->_hp - 5;
   }
 
+  public function afficherClasse() {
+    return $this->_classe;
+  }
   public function afficherName() {
     return $this->_name;
   }
