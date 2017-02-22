@@ -37,7 +37,7 @@ class Personnage {
     $this->_xp = $this->_xp + $addxp;
   }
 
-  public function ajouterBonus() {
+  public function recupererCoffre() {
     if ($this->objet == true) {
       if ($this->objet !== 'Potion' ) {
         if (in_array($this->objet, $this->_int)) {

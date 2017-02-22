@@ -27,15 +27,12 @@
       }
     }
 
-    public function open() {
-      $this->_open = true;
-    }
-
     public function afficherOpen() {
       return $this->_open;
     }
 
-    public function ajouterObjet($perso) {
+    public function ouvrirCoffre($perso) {
+      $this->_open = true;
       $perso->objet = $this->_nameObjet;
     }
 

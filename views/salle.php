@@ -11,19 +11,19 @@ session_start();
 $personnage = $_SESSION['personnage'];
 var_dump($personnage);
 
+$salle = new Salle('Niveau 1', 'Entrée');
+var_dump($salle);
+
 $coffre = new Coffre;
 var_dump($coffre);
 
-$coffre->ajouterObjet($personnage);
-$personnage->ajouterBonus();
+$porte = new Porte;
+$porte->ouvrirPorte();
+var_dump($porte);
 
-// if ($coffre->afficherOpen() == false) {
-//   $coffre->open();
-//   $coffre->ajouterObjet($personnage);
-//   $personnage->ajouterBonus();
-//   var_dump($personnage);
-// }
-
+$coffre->ouvrirCoffre($personnage);
+var_dump($coffre);
+$personnage->recupererCoffre();
 
  ?>
 
