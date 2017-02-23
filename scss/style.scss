@@ -1,1 +1,79 @@
 /* Ici votre code de style. */
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans');
+$ft-title: 'Julius Sans One', sans-serif;;
+$ft-text: 'Open Sans', sans-serif;
+
+
+body {
+  overflow: hidden;
+}
+
+#depart {
+  width: 100vw;
+  height: 100vh;
+  background: url('../img/background-depart.png') no-repeat center;
+  background-size: cover;
+  #background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(251,251,251,0.3);
+  }
+  #creation {
+    background: url('../img/background-depart.png') no-repeat center;
+    background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 2%;
+    width: 500px;
+    height: 500px;
+    #formulaire {
+      .formulaire {
+        color: black;
+        font-family: $ft-text;
+        input {
+          height: 50px;
+          text-transform: uppercase;
+          background : rgba(251,251,251,0.3);
+          margin-top: 30px;
+          width: 100%;
+          text-align: center;
+          border-radius: 2%;
+          border: 1px solid transparent;
+        }
+        .btn-creer {
+          width: 100%;
+          margin-top: 80px;
+          background: white;
+          padding: 5% 0% 5% 0%;
+          transition : color, background, 0.3s linear;
+          &:hover {
+            background: rgba(0,0,0,0.8);
+            color: white;
+          }
+        }
+        select {
+          height: 50px;
+          text-transform: uppercase;
+          background : rgba(251,251,251,0.3);
+          margin-top: 10px;
+          width: 100%;
+          text-align: center;
+          border-radius: 2%;
+          border: 1px solid transparent;
+          option {
+            background: white;
+            padding: 2% 0% 2% 0%;
+          }
+        }
+      }
+    }
+    h2 {
+      margin-top : 60px;
+      color: white;
+      font-size: 30px;
+      font-family: $ft-title;
+    }
+  }
+}
