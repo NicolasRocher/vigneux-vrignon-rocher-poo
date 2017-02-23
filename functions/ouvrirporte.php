@@ -11,7 +11,7 @@ if ($porte->afficherOpenPorte() == false) {
   $personnage->addXp(1);
   header('Location: ../controller/salle-next.php');
 } else {
-  header('Location: ../controller/start.php');
+  header('Location: ../controller/salle.php');
 }
 
  ?>

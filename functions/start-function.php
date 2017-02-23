@@ -11,6 +11,6 @@ $monstre = new Gobelin();
 $_SESSION['monstre'] = $monstre;
 $coffre = new Coffre();
 $_SESSION['coffre'] = $coffre;
-$porte = new Porte('Porte niveau 1');
+$porte = new Porte('Porte niveau 2');
 $_SESSION['porte'] = $porte;
  ?>

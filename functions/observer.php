@@ -13,7 +13,7 @@ if ($monstre->afficherVisibilite() == false && $coffre->afficherOpen() == false)
   $personnage->recupererCoffre($coffre);
   header('Location: ../controller/salle.php');
 } else {
-  header('Location: ../controller/start.php');
+  //header('Location: ../controller/start.php');
 }
 
  ?>

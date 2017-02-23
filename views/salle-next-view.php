@@ -1,6 +1,6 @@
 <?php
 
-require '../functions/salle-function.php';
+require '../functions/salle-next-function.php';
 
  ?>
 
@@ -13,12 +13,12 @@ require '../functions/salle-function.php';
       var_dump($personnage);
       var_dump($porte);
       var_dump($coffre);
-
        ?>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
+
       <a href="../functions/observer.php"><button type="button" name="button" class="text-uppercase">observer</button></a>
       <a href="attaquer.php"><button type="button" name="button" class="text-uppercase">attaquer</button></a>
       <a href="sort.php"><button type="button" name="button" class="text-uppercase">lancer un sort</button></a>
