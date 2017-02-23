@@ -11,6 +11,7 @@ require '../functions/salle-function.php';
       var_dump($salle);
       var_dump($monstre);
       var_dump($personnage);
+      var_dump($porte);
        ?>
     </div>
   </div>
@@ -21,7 +22,7 @@ require '../functions/salle-function.php';
       <a href="attaquer.php"><button type="button" name="button" class="text-uppercase">attaquer</button></a>
       <a href="sort.php"><button type="button" name="button" class="text-uppercase">lancer un sort</button></a>
       <a href="fuir.php"><button type="button" name="button" class="text-uppercase">fuir</button></a>
-      <a href="porte.php"><button type="button" name="button" class="text-uppercase">ouvrir la porte</button></a>
+      <a href="../functions/ouvrirporte.php"><button type="button" name="button" class="text-uppercase">ouvrir la porte</button></a>
 
 
     </div>
