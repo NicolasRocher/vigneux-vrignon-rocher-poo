@@ -1,0 +1,16 @@
+#navbar {
+  background: #333333;
+  height: auto;
+  color: white;
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+  .navbar-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    h1 {
+      font-size: 3vh;
+    }
+  }
+}

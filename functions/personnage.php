@@ -13,8 +13,10 @@ class Personnage {
   protected $_mag;
   protected $_def;
   protected $_pv;
-  protected $_xp;
-  protected $_int = array();
+  protected $_xp = 0;
+  protected $_resume;
+  protected $_stats;
+  protected $_int = array(1,2);
   public $objet;
 
   public function frapper($monstreAttaque){
@@ -26,9 +28,6 @@ class Personnage {
   public function ouvrirPorte() {
     $this->_xp += 1;
     header('Location: salles.php');
-  }
-  public function ouvrirCoffre($coffreOuvert) {
-    $coffreOuvert->_objet = $this->_wp; // ne permet que l'arme, pas la potion.
   }
   public function fuir() {
     $this->_pv = $this->_hp - 5;
@@ -85,11 +84,31 @@ class Personnage {
   public function afficherDef() {
     return $this->_def;
   }
+  public function afficherResume() {
+    return $this->_resume;
+  }
+  public function afficherInt() {
+    foreach ($this->_int as $items) {
+      return '- ' . $items . '<br>';
+    }
+  }
+  public function afficherAtouts() {
+    return $this->_atouts;
+  }
+  public function afficherFaiblesses() {
+    return $this->_faiblesses;
+  }
   public function afficherXp() {
     return $this->_xp;
   }
-  public function afficherWeapon() {
-    return $this->_weapon;
+  public function afficherCapacites() {
+    if ($this->_capacites !== array()) {
+      return $this->_capacites;
+    } else {
+      foreach ($this->_capacites as $keys => $capacite) {
+        return $capacite[$keys];
+      }
+    }
   }
 
 }

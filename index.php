@@ -1,9 +1,9 @@
 <?php
 
-require 'views/footer.php';
+require 'views/header-index.php';
 require "functions/functions.php";
 
-require 'views/depart.php';
+require 'views/index-view.php';
 
 require 'views/footer.php';
 

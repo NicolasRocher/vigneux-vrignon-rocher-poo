@@ -11,17 +11,17 @@ if (isset($_POST['name']) && !empty($_POST['name']) && isset($_POST['classe']) &
     $personnage = new Magicien($_POST['name']);
     $_SESSION['personnage'] = $personnage;
     var_dump($personnage);
-    header ('Location: ../views/start.php');
-  } else if ($_POST['classe'] == 'paladin'){
-    $personnage = new Paladin($_POST['name']);
+    header ('Location: ../controller/start.php');
+  } else if ($_POST['classe'] == 'barbare'){
+    $personnage = new Barbare($_POST['name']);
     $_SESSION['personnage'] = $personnage;
     var_dump($personnage);
-    header ('Location: ../views/start.php');
-  } else if ($_POST['classe'] == 'guerrier'){
-    $personnage = new Guerrier($_POST['name']);
+    header ('Location: ../controller/start.php');
+  } else if ($_POST['classe'] == 'ranger'){
+    $personnage = new Ranger($_POST['name']);
     $_SESSION['personnage'] = $personnage;
     var_dump($personnage);
-    header ('Location: ../views/start.php');
+    header ('Location: ../controller/start.php');
   } else {
     echo 'erreur';
   }

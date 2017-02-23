@@ -31,6 +31,7 @@
       return $this->_open;
     }
 
+
     public function ouvrirCoffre($perso) {
       $this->_open = true;
       $perso->objet = $this->_nameObjet;

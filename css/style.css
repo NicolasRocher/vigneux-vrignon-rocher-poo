@@ -1,7 +1,80 @@
 /* Ici votre code de style. */
-@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans");
-body {
-  overflow: hidden;
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans|Russo+One");
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans|Russo+One");
+#navbar {
+  background: #333333;
+  height: auto;
+  color: white;
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+}
+
+#navbar .navbar-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+#navbar .navbar-title h1 {
+  font-size: 3vh;
+}
+
+#start {
+  height: 100vh;
+  width: 100vw;
+  background: url("../img/background-depart.png") no-repeat center;
+  background-size: cover;
+}
+
+#start .profil {
+  background: rgba(251, 251, 251, 0.5);
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+#start .profil .profil-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#start .profil .profil-img img {
+  border-radius: 3%;
+}
+
+#start .profil .infos {
+  height: 100%;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+#start .profil .infos h3 {
+  font-family: "Julius Sans One", sans-serif;
+  color: #D91E18;
+  font-weight: bold;
+}
+
+#start .profil .resume {
+  text-align: center;
+}
+
+#start .profil .resume h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: bold;
+  color: #D91E18;
+}
+
+#start .profil .resume p span {
+  color: #D91E18;
+  font-weight: bold;
+}
+
+#start .profil .resume p .title {
+  font-family: "Julius Sans One", sans-serif;
 }
 
 #depart {
@@ -43,19 +116,28 @@ body {
   text-align: center;
   border-radius: 2%;
   border: 1px solid transparent;
+  transition: background, color, 0.3s ease-in;
+}
+
+#depart #creation #formulaire .formulaire input:focus {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 #depart #creation #formulaire .formulaire .btn-creer {
+  font-size: 20px;
   width: 100%;
-  margin-top: 80px;
-  background: white;
+  height: auto;
+  color: white;
+  margin-top: 120px;
+  background: rgba(0, 0, 0, 0.7);
   padding: 5% 0% 5% 0%;
   transition: color, background, 0.3s linear;
 }
 
 #depart #creation #formulaire .formulaire .btn-creer:hover {
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
+  background: rgba(251, 251, 251, 0.8);
+  color: #333333;
 }
 
 #depart #creation #formulaire .formulaire select {
@@ -72,6 +154,8 @@ body {
 #depart #creation #formulaire .formulaire select option {
   background: white;
   padding: 2% 0% 2% 0%;
+  border: 1px solid transparent;
+  border-radius: 2%;
 }
 
 #depart #creation h2 {

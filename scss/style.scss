@@ -1,11 +1,13 @@
 /* Ici votre code de style. */
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans');
-$ft-title: 'Julius Sans One', sans-serif;;
+@import 'style/navbar';
+@import 'style/start';
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans|Russo+One');
+$ft-title: 'Julius Sans One', sans-serif;
 $ft-text: 'Open Sans', sans-serif;
 
 
 body {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 #depart {
@@ -41,16 +43,24 @@ body {
           text-align: center;
           border-radius: 2%;
           border: 1px solid transparent;
+          transition: background, color, 0.3s ease-in;
+          &:focus {
+            background: rgba(0,0,0,0.5);
+            color: white;
+          }
         }
         .btn-creer {
+          font-size: 20px ;
           width: 100%;
-          margin-top: 80px;
-          background: white;
+          height: auto;
+          color: white;
+          margin-top: 120px;
+          background: rgba(0,0,0,0.7);
           padding: 5% 0% 5% 0%;
           transition : color, background, 0.3s linear;
           &:hover {
-            background: rgba(0,0,0,0.8);
-            color: white;
+            background: rgba(251,251,251,0.8);
+            color: #333333;
           }
         }
         select {
@@ -65,6 +75,8 @@ body {
           option {
             background: white;
             padding: 2% 0% 2% 0%;
+            border:1px solid transparent;
+            border-radius: 2%;
           }
         }
       }

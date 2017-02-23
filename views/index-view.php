@@ -25,9 +25,9 @@ include 'header.php'
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <select name="classe">
-                  <option value="guerrier">Guerrier</option>
+                  <option value="ranger">Ranger</option>
                   <option value="magicien">Magicien</option>
-                  <option value="paladin">Paladin</option>
+                  <option value="barbare">Barbare</option>
                 </select>
               </div>
             </div>
