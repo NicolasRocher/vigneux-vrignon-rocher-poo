@@ -7,9 +7,11 @@
     protected $_nameObjet;
     protected $_bonus;
     protected $_open = false;
+    protected $_visibilite;
 
     public function __construct() {
       $this->_objet = array_rand($this->_objet, 1);
+      $this->_visibilite = false;
       if ($this->_objet == 0) {
         $this->_name = 'Coffre en Or';
         $this->_nameObjet = 'Bâton de Magicien';
@@ -27,16 +29,22 @@
       }
     }
 
-    public function afficherOpen() {
-      return $this->_open;
+    public function afficherVisibilite() {
+      return $this->_visibilite;
     }
 
+    public function changerVisibilite() {
+      $this->_visibilite = true;
+    }
 
     public function ouvrirCoffre($perso) {
       $this->_open = true;
       $perso->objet = $this->_nameObjet;
     }
 
+    public function afficherOpen() {
+      return $this->_open;
+    }
 
   }
 

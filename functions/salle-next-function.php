@@ -42,7 +42,7 @@ if ($personnage->afficherXp() == 1) {
   $monstre = new Dragon();
   $_SESSION['monstre'] = $monstre;
 } else if ($personnage->afficherXp() >= 5){
-  header('Location: win.php');
+  header('Location: ../views/win.php');
 } else {
   echo 'erreur';
 }

@@ -4,12 +4,11 @@ include 'functions.php';
 session_start();
 
 $personnage = $_SESSION['personnage'];
-$monstre = $_SESSION['monstre'];
 $coffre = $_SESSION['coffre'];
 
-if ($monstre->afficherVisibilite() == false && $coffre->afficherOpen() == false) {
-  $monstre->changerVisibilite();
-  $coffre->changerVisibilite();
+if ($coffre->afficherOpen() == false) {
+  $coffre->ouvrirCoffre($personnage);
+  $personnage->recupererCoffre($coffre);
 }
 
 if ($personnage->afficherXp <= 1) {

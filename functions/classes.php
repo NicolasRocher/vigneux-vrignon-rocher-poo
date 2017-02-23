@@ -3,7 +3,7 @@
 class Ranger extends Personnage {
   protected $_xp = 0;
   protected $_int = array();
-  protected $objet;
+  public $objet;
 
   public function __construct($name) {
     $this->_classe = 'Ranger';
@@ -26,7 +26,7 @@ class Ranger extends Personnage {
 class Magicien extends Personnage {
   protected $_xp = 0;
   protected $_int = array();
-  protected $objet;
+  public $objet;
 
 
   public function __construct($name) {
@@ -49,7 +49,7 @@ class Magicien extends Personnage {
 class Barbare extends Personnage {
   protected $_xp = 0;
   protected $_int = array();
-  protected $objet;
+  public $objet;
 
 
   public function __construct($name) {

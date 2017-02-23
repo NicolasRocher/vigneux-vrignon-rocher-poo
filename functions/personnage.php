@@ -25,20 +25,24 @@ class Personnage {
       $victime->_pv -= ($this->_atk - $victime->_def);
     }
   }
-  public function lancerSort($monstreAttaque){
-    $monstreAttaque->_pv -= $this->_mag;
+  public function lancerSort($victime){
+    if ($victime->_def >= $this->_mag) {
+      return;
+    } else {
+      $victime->_pv -= ($this->_mag - $victime->_def);
+    }
   }
   public function ouvrirPorte() {
     $this->_xp += 1;
     header('Location: salles.php');
   }
-  public function fuir() {
-    $this->_pv = $this->_hp - 5;
+  public function fuir($monstre) {
+    $monstre->_mort = true;
+    $this->_pv -= 5;
   }
   public function addXp($addxp) {
     $this->_xp = $this->_xp + $addxp;
   }
-
   public function recupererCoffre() {
     if ($this->objet == true) {
       if ($this->objet !== 'Potion' ) {
@@ -69,6 +73,10 @@ class Personnage {
     }
   }
 
+  public function afficherMort() {
+    return $this->_mort;
+  }
+  
   public function afficherClasse() {
     return $this->_classe;
   }
