@@ -12,7 +12,7 @@ if ($personnage->afficherXp() == 1) {
   $_SESSION['porte'] = $porte;
   $coffre = new Coffre();
   $_SESSION['coffre'] = $coffre;
-  $monstre = new MagicienNoir();
+  $monstre = new MagicienNoir('Petit Magicien Noir');
   $_SESSION['monstre'] = $monstre;
 } else if ($personnage->afficherXp() == 2) {
   $salle = new Salle('Niveau 3', 'Cachots');
@@ -21,7 +21,7 @@ if ($personnage->afficherXp() == 1) {
   $_SESSION['porte'] = $porte;
   $coffre = new Coffre();
   $_SESSION['coffre'] = $coffre;
-  $monstre = new Gobelin();
+  $monstre = new Gobelin('Grand Gobelin');
   $_SESSION['monstre'] = $monstre;
 } else if ($personnage->afficherXp() == 3) {
   $salle = new Salle('Niveau 4', 'Cimetière');
@@ -30,14 +30,14 @@ if ($personnage->afficherXp() == 1) {
   $_SESSION['porte'] = $porte;
   $coffre = new Coffre();
   $_SESSION['coffre'] = $coffre;
-  $monstre = new MagicienNoir();
+  $monstre = new MagicienNoir('Grand Magicien Noir');
   $_SESSION['monstre'] = $monstre;
 } else if ($personnage->afficherXp() == 4) {
   $salle = new Salle('Niveau 6', 'Antre du Dragon');
   $_SESSION['salle'] = $salle;
   $porte = new Porte('Porte niveau la fin ..');
   $_SESSION['porte'] = $porte;
-  $coffre = new Coffre();
+  $coffre = new Coffre('Dragoniac');
   $_SESSION['coffre'] = $coffre;
   $monstre = new Dragon();
   $_SESSION['monstre'] = $monstre;

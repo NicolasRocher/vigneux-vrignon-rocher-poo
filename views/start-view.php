@@ -42,7 +42,13 @@ require '../functions/start-function.php';
           <div class="row">
             <div class="col-md-10 col-md-offset-1">
               <h3>Les capacités du <?php echo $personnage->afficherClasse(); ?></h3>
-              <p><?php echo $personnage->afficherCapacites(); ?></p>
+              <p><?php
+              if ($personnage->afficherClasse() == 'Barbare') {
+                echo $personnage->afficherBarbareArray();
+              } else {
+                echo $personnage->afficherCapacites();
+              }
+              ?></p>
             </div>
           </div>
         </div>

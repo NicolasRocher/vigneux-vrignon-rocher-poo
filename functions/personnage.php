@@ -13,14 +13,17 @@ class Personnage {
   protected $_mag;
   protected $_def;
   protected $_pv;
-  protected $_xp = 0;
+  protected $_speed;
   protected $_resume;
   protected $_stats;
-  protected $_int = array(1,2);
-  public $objet;
+  protected $_mort = false;
 
-  public function frapper($monstreAttaque){
-    $monstreAttaque->_pv -= $this->_atk;
+  public function frapper($victime){
+    if ($victime->_def >= $this->_atk) {
+      return;
+    } else {
+      $victime->_pv -= ($this->_atk - $victime->_def);
+    }
   }
   public function lancerSort($monstreAttaque){
     $monstreAttaque->_pv -= $this->_mag;
@@ -84,6 +87,9 @@ class Personnage {
   public function afficherDef() {
     return $this->_def;
   }
+  public function afficherSpeed() {
+    return $this->_speed;
+  }
   public function afficherResume() {
     return $this->_resume;
   }
@@ -109,6 +115,10 @@ class Personnage {
         return $capacite[$keys];
       }
     }
+  }
+
+  public function mort() {
+    $this->_mort = true;
   }
 
 }

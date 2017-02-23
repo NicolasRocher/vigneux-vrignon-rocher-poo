@@ -2,13 +2,8 @@
 
 require 'classes-monstres.php';
 
-class Monstre {
+class Monstre extends Personnage{
 
-  protected $_name;
-  protected $_atk;
-  protected $_mag;
-  protected $_def;
-  protected $_pv;
   protected $_visibilite = false;
 
   public function afficherVisibilite() {
@@ -17,7 +12,7 @@ class Monstre {
   public function changerVisibilite() {
     $this->_visibilite = true;
   }
-
+  
 }
 
 

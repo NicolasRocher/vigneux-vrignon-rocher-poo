@@ -6,13 +6,32 @@ session_start();
 $personnage = $_SESSION['personnage'];
 $monstre = $_SESSION['monstre'];
 
-if ($monstre->afficherVisibilite() == false && $coffre->afficherOpen() == false) {
-  $monstre->changerVisibilite();
-  $coffre->ouvrirCoffre($personnage);
-  $personnage->recupererCoffre($coffre);
-  header('Location: ../controller/salle.php');
-} else {
-  header('Location: ../controller/start.php');
+
+
+while ($monstre->afficherPv() > 0 && $personnage->afficherPv() > 0) {
+  if ($monstre->afficherSpeed() >= $personnage->afficherSpeed()) {
+    $monstre->frapper($personnage);
+    $personnage->frapper($monstre);
+  } else {
+    $personnage->frapper($monstre);
+    $monstre->frapper($personnage);
+  }
 }
+if($personnage->afficherPv() > 0) {
+  $monstre->mort();
+  if ($personnage->afficherXp <= 1) {
+    header('Location: ../controller/salle.php');
+  } else if ($personnage->afficherXp > 1) {
+    header('Location: ../controller/salle-next.php');
+  } else {
+    echo 'erreur';
+  }
+} else {
+  $personnage->mort();
+  header('Location: ../views/loose.php');
+}
+var_dump($personnage);
+var_dump($monstre);
+
 
  ?>
