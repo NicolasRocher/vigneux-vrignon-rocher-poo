@@ -1,0 +1,74 @@
+#salle {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/background-depart.png')no-repeat center;
+  background-size: cover;
+  font-family: $ft-text;
+  color: white;
+  .title {
+    text-transform: uppercase;
+    font-size: 2.5vh;
+    font-family: $ft-title;
+  }
+  .personnage {
+    background: rgba(251,251,251,0.5);
+    height: 100vh;
+    padding: 0;
+    img {
+      margin-top: 3%;
+    }
+    .infos {
+      text-align: left;
+      margin-top: 3%;
+      span {
+        text-transform: uppercase;
+        font-size: 3vh;
+      }
+      .pdv {
+        color: red;
+        font-family: $ft-text;
+        font-size: 2.5vh;
+      }
+    }
+    .caracteristiques {
+      text-align : left;
+      h3 {
+        font-family: $ft-title;
+      }
+    }
+    .ouvrir {
+      margin: 0;
+      position:absolute;
+      bottom: 5%;
+      vertical-align: center;
+      width: 100vw;
+      text-align: center;
+    }
+  }
+  .monstre {
+    height: 100vh;
+    padding: 0;
+    img {
+      margin-top: 3%;
+    }
+    .infos {
+      text-align: right;
+      margin-top: 3%;
+      span {
+        text-transform: uppercase;
+        font-size: 3vh;
+      }
+      .pdv {
+        color: red;
+        font-family: $ft-text;
+        font-size: 2.5vh;
+      }
+    }
+    .caracteristiques {
+      text-align : left;
+      h3 {
+        font-family: $ft-title;
+      }
+    }
+  }
+}

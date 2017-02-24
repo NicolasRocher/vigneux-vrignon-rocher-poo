@@ -10,6 +10,13 @@ class Salle {
     $this->_lieu = $lieu;
   }
 
+  public function afficherTitle() {
+    return $this->_title;
+  }
+  public function afficherLieu() {
+    return $this->_lieu;
+  }
+
 
 }
  ?>

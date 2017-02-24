@@ -8,6 +8,7 @@ class Ranger extends Personnage {
   public function __construct($name) {
     $this->_classe = 'Ranger';
     $this->_name = $name;
+    $this->_img = '<img src="../img/ranger.jpg" />';
     $this->_atk += 40;
     $this->_mag += 0;
     $this->_def += 25;
@@ -32,6 +33,7 @@ class Magicien extends Personnage {
   public function __construct($name) {
     $this->_classe = 'Magicien';
     $this->_name = $name;
+    $this->_img = '<img src="../img/magicien.jpg" />';
     $this->_atk += 0;
     $this->_mag += 50;
     $this->_def += 20;
@@ -55,6 +57,7 @@ class Barbare extends Personnage {
   public function __construct($name) {
     $this->_classe = 'Barbare';
     $this->_name = $name;
+    $this->_img = '<img src="../img/barbare.jpg" />';
     $this->_atk += 50;
     $this->_mag += 50;
     $this->_def += 50;

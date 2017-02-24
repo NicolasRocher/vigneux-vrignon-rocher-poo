@@ -9,6 +9,7 @@ class Personnage {
 
   protected $_classe;
   protected $_name;
+  protected $_img;
   protected $_atk;
   protected $_mag;
   protected $_def;
@@ -72,11 +73,13 @@ class Personnage {
       }
     }
   }
-
+  public function afficherImg() {
+    return $this->_img;
+  }
   public function afficherMort() {
     return $this->_mort;
   }
-  
+
   public function afficherClasse() {
     return $this->_classe;
   }

@@ -3,6 +3,10 @@
 @import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans|Russo+One");
 #navbar {
   background: #333333;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: auto;
   color: white;
   padding-top: 1vh;
@@ -74,6 +78,97 @@
 }
 
 #start .profil .resume p .title {
+  font-family: "Julius Sans One", sans-serif;
+}
+
+#salle {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/background-depart.png") no-repeat center;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+}
+
+#salle .title {
+  text-transform: uppercase;
+  font-size: 2.5vh;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+#salle .personnage {
+  background: rgba(251, 251, 251, 0.5);
+  height: 100vh;
+  padding: 0;
+}
+
+#salle .personnage img {
+  margin-top: 3%;
+}
+
+#salle .personnage .infos {
+  text-align: left;
+  margin-top: 3%;
+}
+
+#salle .personnage .infos span {
+  text-transform: uppercase;
+  font-size: 3vh;
+}
+
+#salle .personnage .infos .pdv {
+  color: red;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5vh;
+}
+
+#salle .personnage .caracteristiques {
+  text-align: left;
+}
+
+#salle .personnage .caracteristiques h3 {
+  font-family: "Julius Sans One", sans-serif;
+}
+
+#salle .personnage .ouvrir {
+  margin: 0;
+  position: absolute;
+  bottom: 5%;
+  vertical-align: center;
+  width: 100vw;
+  text-align: center;
+}
+
+#salle .monstre {
+  height: 100vh;
+  padding: 0;
+}
+
+#salle .monstre img {
+  margin-top: 3%;
+}
+
+#salle .monstre .infos {
+  text-align: right;
+  margin-top: 3%;
+}
+
+#salle .monstre .infos span {
+  text-transform: uppercase;
+  font-size: 3vh;
+}
+
+#salle .monstre .infos .pdv {
+  color: red;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5vh;
+}
+
+#salle .monstre .caracteristiques {
+  text-align: left;
+}
+
+#salle .monstre .caracteristiques h3 {
   font-family: "Julius Sans One", sans-serif;
 }
 
